@@ -1,6 +1,9 @@
 *,
+/*failsafe*/
 *::before,
 *::after {
+
+  /*keeps div at the same pixel size as you raise it. Won't change the . */
   box-sizing: border-box;
 }
 
