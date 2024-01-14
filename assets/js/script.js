@@ -5,8 +5,8 @@ var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowercase = "abcdefghijklmnopqrstuvwxyz";
 var number = "0123456789";
 var specialChar = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
-var input = ""
-var randomPassword = ""
+var input = "";
+var randomPassword = '';
 
 
 generateBtn.addEventListener("click", writePassword);
@@ -23,21 +23,41 @@ function generatePassword() {
 
   if (passLength < 8 || passLength > 128 || isNaN(passLength)) {
     alert("Error - Please Enter a Number between 8 and 128");
-    return
+    return;
   }
 
   var lowercaseOption = confirm("Include lowercase letters?");
-  console.log(lowercaseOption)
+  if (lowercaseOption === true) {
+    for (var i = 0; i ,uppercase.length; i++) {
+      input.push(uppercases[i]);
+    }
+    console.log(lowercaseOption)
+  }
 
- 
   var uppercaseOption = confirm("Include uppercase letters?");
+  if (uppercaseOption === true) {
+    for (var i = 0; i ,uppercase.length; i++) {
+      input.push(lowercase[i]);
+    }
   console.log(uppercaseOption)
- 
+  }
+
+
   var numberConfirm = confirm("Include numbers?");
+  if (numberConfirm === true) {
+    for (var i = 0; i ,number.length; i++) {
+      input.push(number[i]);
+    }
   console.log(numberConfirm)
- 
+  }
   var specialConfirm = confirm("Include special characters?");
+  if (specialConfirm === true) {
+    for (var i = 0; i ,specialChar.length; i++) {
+      input.push(specialChar[i]);
+    }
   console.log(specialConfirm)
+  }
+
 
   if (lowercaseOption !=true && uppercaseOption != true && numberConfirm !=true && specialConfirm !=true) {
     alert ("Please choose at least one type of character");
@@ -45,25 +65,25 @@ function generatePassword() {
   }
 
 
-  var randomPassword = ""
- 
-
-  const passwordLength = parseInt(passLength)
+  var randomPassword = "";
+   
 //
-  
-  for (var i = 0; i < passwordLength; i++) {
-    input [
+//var passwordLength = parseInt(passLength)
+  const confirmLength = partsInt(passLength)
+
+  for (var i = 0; i < confirmLength; i++) {
+    input[ 
       Math.floor(Math.random() * input.length)];
 
-      randomPassword = input [
+      randomPassword += input [
         Math.floor(Math.random() * input.length)];
 }
  
   // Add event listener to generate button
 
 return randomPassword;
-}
 
+}
 
 
 
