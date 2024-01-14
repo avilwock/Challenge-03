@@ -28,33 +28,38 @@ function generatePassword() {
 
   var lowercaseOption = confirm("Include lowercase letters?");
   console.log(lowercaseOption)
-   
+
+ 
   var uppercaseOption = confirm("Include uppercase letters?");
   console.log(uppercaseOption)
-
+ 
   var numberConfirm = confirm("Include numbers?");
   console.log(numberConfirm)
-
+ 
   var specialConfirm = confirm("Include special characters?");
   console.log(specialConfirm)
 
   if (lowercaseOption !=true && uppercaseOption != true && numberConfirm !=true && specialConfirm !=true) {
     alert ("Please choose at least one type of character");
-    return
+    return;
   }
 
- //
-//
-for (var i = 0; i < confirmLength; i++) {
-  input [
-      Math.floor(Math.random()* input.length)];
 
-      randPassword = input [
+  var randomPassword = ""
+ 
+
+  const passwordLength = parseInt(passLength)
+//
+  
+  for (var i = 0; i < passwordLength; i++) {
+    input [
+      Math.floor(Math.random() * input.length)];
+
+      randomPassword = input [
         Math.floor(Math.random() * input.length)];
 }
  
   // Add event listener to generate button
-
 
 return randomPassword;
 }
@@ -72,9 +77,7 @@ return randomPassword;
 //}
 
 // 
-//if (lowercaseOption === true) {
-//  for (var i = 0; i < lowercase.length; i ++) {
-//    input.push(lowercase[i]);
+//
  //   return
 //  }
 //  console.log(input);
