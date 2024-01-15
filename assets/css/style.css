@@ -1,12 +1,16 @@
 *,
-/*failsafe*/
+/*failsafe to prevent changes to the formatting after tasks have 
+been performed.*/
 *::before,
 *::after {
 
-  /*keeps div at the same pixel size as you raise it. Won't change the . */
+  /*keeps div at the same pixel size as you raise it. Won't change the size
+  relative to the page as you increase or decrease the zoom.*/
   box-sizing: border-box;
 }
 
+/*This keeps the HTML, Body, and the wrapper class with height the full 
+size of the content area, and the margin and padding to 0 pixels.*/
 html,
 body,
 .wrapper {
@@ -15,17 +19,25 @@ body,
   padding: 0;
 }
 
+/*This has the body with a font-family of sans-serif, and the background color
+set to #f9fbfd.*/
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
 }
 
+/*This sets the wrapper class to have a padding on the top of 30 pixels, left
+of 20 pixels, and right of 20 pixels.*/
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
+/*This sets the header element to have the text aligned to the center, and the
+padding around it to 20 pixels. The padding at the top is set to 0 pixels.
+The color of the font is set to hs1 with 206 value for red, 17% for green, and
+28% for blue.*/
 header {
   text-align: center;
   padding: 20px;
@@ -33,6 +45,14 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+/*This sets the card class to have a background color of hs1 with a 0 value for
+red, 0% for green, and 100% for blue. The border-radius is set for 5 pixels,
+and a width of 1 pixel. The card class is give a box shadow of .15 for opacity.
+The font color is set to hs1 with 206 value for red, 17% for green, and 28% for
+blue. The font size is set to 18 pixels. The margins are set to 0 for the top and
+bottom, and auto for the left and right. The max width of the card is 800 pixels.
+The padding is 30 pixels for the top and bottom, and 40 pixels for the left and
+right.*/
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -45,6 +65,9 @@ header {
   padding: 30px 40px;
 }
 
+/*This sets the card header content to display in a block with a width
+of 100%. The background color is set to e7e9eb, and the height is set 
+to 2 pixels.*/
 .card-header::after {
   content: " ";
   display: block;
@@ -53,14 +76,18 @@ header {
   height: 2px;
 }
 
+/*This sets the card body minimum height to 100 pixels.*/
 .card-body {
   min-height: 100px;
 }
 
+/*This aligns the card-footer text to the center.*/
 .card-footer {
   text-align: center;
 }
 
+/*This sets the card footer before the script is run to be in block display
+with a width of 100%, a background color of #e7e9eb.*/
 .card-footer::before {
   content: " ";
   display: block;
@@ -69,12 +96,21 @@ header {
   height: 2px;
 }
 
+/*This sets the card footer after the script is run to have a block display and to
+move the element below the box.*/
 .card-footer::after {
   content: " ";
   display: block;
   clear: both;
 }
 
+/*This gives the button no border, and a background-color of red. The border radius
+is 25 pixels. The box shadow is rgba with transparency set to .1. The font is st to
+hs1 with a red of 0, a green of 0% and a blue of 100%. The display is set to inline
+block. The font-size is 22 pixels and the line height is 22 pixels. The margins are
+set to 16 pixels for the top, right, and bottom, and 20 pixels for the left. The
+padding is set to 14 pixels for the top and bottom, and 34 pixels for the left and
+right. The text is aligned to the center, and the cursor is made into a pointer.*/
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -91,15 +127,24 @@ header {
   cursor: pointer;
 }
 
+/*when the button is inactive, the cursor is in a default state with a background
+color of #c0c7cf.*/
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
 }
 
+/*sets the float right class to float right.*/
 .float-right {
   float: right;
 }
 
+/*sets the password id to have no webkit-appearance, moz-appearance, appearance, or
+border. The display is st to block. The width is 100%, with padding top left and
+right at 15 pixels. The bottom padding is set to 85 pixels. The font size is 1.2
+rem. The text is aligned to the center. The maring top is 10 pixels. The border is
+2 pixels, dashed, and colored #c0c7cf. There is a border raidus of 6 pixels. There
+is no resize, and the overflow is hidden.*/
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -121,18 +166,24 @@ button[disabled] {
   overflow: hidden;
 }
 
+/*This sets the media on devices with a max width of 69 pixels. The button's font
+size is set to 1rem. The top margin is set to 16 pixels, and the others are set to
+0 pixels. The padding is 10 pixels on the top and bottom, and 15 pixels on the left
+and right.*/
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
     margin: 16px 0px 0px 0px;
     padding: 10px 15px;
   }
-
+/*This sets the password font size to 1 rem.*/
   #password {
     font-size: 1rem;
   }
 }
 
+/*This sets the font size to .8rem for media devices with a max width of 500 
+pixels.*/
 @media (max-width: 500px) {
   .btn {
     font-size: 0.8rem;
