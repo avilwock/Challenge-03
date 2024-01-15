@@ -29,7 +29,7 @@ function generatePassword() {
   var lowercaseOption = confirm("Include lowercase letters?");
   if (lowercaseOption === true) {
     for (var i = 0; i < lowercase.length; i++) {
-      input.push(lowercase[i]);
+      input.unshift(lowercase[i]);
     }
     console.log(input[i]);
     }
@@ -37,37 +37,32 @@ function generatePassword() {
   var uppercaseOption = confirm("Include uppercase letters?");
   if (uppercaseOption === true) {
     for (var i = 0; i < uppercase.length; i++) {
-      input.push(uppercase[i]);
+      input.unshift(uppercase[i]);
     }
-  console.log(input[i])
-  }
-
+    console.log(input[i]);
+    }
 
   var numberConfirm = confirm("Include numbers?");
   if (numberConfirm === true) {
     for (var i = 0; i < number.length; i++) {
-      input.push(number[i]);
+      input.unshift(number[i]);
     }
   console.log(input[i])
   }
+  
   var specialConfirm = confirm("Include special characters?");
   if (specialConfirm === true) {
     for (var i = 0; i < specialChar.length; i++) {
-      input.push(specialChar[i]);
+      input.unshift(specialChar[i]);
     }
   console.log(input[i])
   }
 
-
-  if (lowercaseOption !=true && uppercaseOption != true && numberConfirm !=true && specialConfirm !=true) {
+  if (lowercaseOption !=true && uppercaseOption !=true && numberConfirm !=true && specialConfirm !=true) {
     alert ("Please choose at least one type of character");
     return;
   }
 
-
-  var randomPassword = "";
-   
-//
 //var passwordLength = parseInt(passLength)
   const confirmLength = parseInt(passLength)
 
@@ -81,24 +76,5 @@ function generatePassword() {
  
   // Add event listener to generate button
 
-return randomPassword;
-
+return randomPassword
 }
-
-
-
-
-
-//
-//
-//function generatePassword() {
- // var password='';
- // return "password";
-//}
-
-// 
-//
- //   return
-//  }
-//  console.log(input);
-//}
