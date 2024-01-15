@@ -31,6 +31,8 @@ To access this site, please visit:
 
 To use this document, press the red "Generate Password" button at the bottom of the form. An alert box will appear at the top of the screen and give several prompts. Answer all of the prompts in order to generate a password into the "Your Secure Password" box.
 
+![Alt text](assets/images/03-javascript-homework-demo.png)
+
 ## Credits
 With thanks to:
 
