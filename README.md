@@ -21,7 +21,9 @@ Four different prompts were created, each asking about whether or not certain fa
 
 Tests were done to ensure that all prompts led to a password generation with the specific necessary criteria.
 
-For future ammendments to this project, I suggest adding a reset button so that the generator doesn't need to be reopened each time to reset the parameters. I also recommend a copy button to copy and paste the password quickly.
+The variables for the generated password and input were also cleared each time on click so that the textbox cleared each use, and previous prompts were ignored.
+
+For future ammendments to this project, I recommend a copy button to copy and paste the password quickly.
 
 ## Access
 

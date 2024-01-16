@@ -17,8 +17,9 @@ function writePassword() {
   passwordText.value = password;
 }
 
-
 function generatePassword() {
+  randomPassword = "";
+  input = [""];
   var passLength = prompt("Please enter desired number of characters between 8 and 128");
 
   if (passLength < 8 || passLength > 128 || isNaN(passLength)) {
