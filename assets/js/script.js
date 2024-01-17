@@ -1,22 +1,21 @@
 var generateBtn = document.querySelector("#generate");
-
-var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var lowercase = "abcdefghijklmnopqrstuvwxyz";
-var number = "0123456789";
-var specialChar = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 var input = [""];
 var randomPassword = '';
-
 
 generateBtn.addEventListener("click", writePassword);
 
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
+  
   passwordText.value = password;
 }
 
 function generatePassword() {
+  var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var lowercase = "abcdefghijklmnopqrstuvwxyz";
+  var number = "0123456789";
+  var specialChar = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
   randomPassword = "";
   input = [""];
   var passLength = prompt("Please enter desired number of characters between 8 and 128");
